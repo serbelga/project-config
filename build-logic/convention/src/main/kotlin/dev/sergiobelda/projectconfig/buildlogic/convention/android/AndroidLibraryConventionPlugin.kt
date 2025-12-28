@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package dev.sergiobelda.projectconfig.buildlogic.convention
+package dev.sergiobelda.projectconfig.buildlogic.convention.android
 
 import com.android.build.api.dsl.CommonExtension
 import com.android.build.gradle.LibraryExtension

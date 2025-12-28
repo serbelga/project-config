@@ -23,11 +23,11 @@ gradlePlugin {
         val conventionPluginsPath = "dev.sergiobelda.projectconfig.buildlogic.convention"
         create("android-library") {
             id = libs.plugins.sergiobelda.convention.android.library.get().pluginId
-            implementationClass = "$conventionPluginsPath.AndroidLibraryConventionPlugin"
+            implementationClass = "$conventionPluginsPath.android.AndroidLibraryConventionPlugin"
         }
         create("spotless") {
             id = libs.plugins.sergiobelda.convention.spotless.get().pluginId
-            implementationClass = "$conventionPluginsPath.SpotlessConventionPlugin"
+            implementationClass = "$conventionPluginsPath.spotless.SpotlessConventionPlugin"
         }
     }
 }
