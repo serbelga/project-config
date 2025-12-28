@@ -1,0 +1,13 @@
+*.iml
+/.idea/
+/build/
+/convention/build/
+/local.properties
+.gradle
+/imagevectorgenerator/build/
+/.kotlin/
+
+# Project exclude paths
+/build-logic/convention/build/
+/build-logic/convention/build/classes/kotlin/main/
+/dependencies/dependencies/build/

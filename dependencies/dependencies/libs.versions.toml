@@ -1,0 +1,169 @@
+[versions]
+activity = "1.12.2"
+androidCompileSdk = "36"
+androidGradlePlugin = "8.13.2"
+androidMinSdk = "24"
+androidTargetSdk = "36"
+androidWearMinSdk = "25"
+androidWearTargetSdk = "33"
+androidxBenchmark = "1.4.1"
+androidxCore = "1.17.0"
+androidxJunit = "1.3.0"
+androidxLifecycle = "2.10.0"
+appcompat = "1.7.1"
+composeBom = "2025.12.01"
+composeMultiplatform = "1.10.0-rc02"
+composeMultiplatformMaterial3 = "1.9.0"
+composeVectorize = "1.1.0"
+daggerHilt = "2.57.2"
+datastore = "1.1.7"
+dokka = "2.1.0"
+espresso = "3.7.0"
+firebaseBom = "33.16.0"
+firebaseCrashlyticsPlugin = "3.0.6"
+fonament = "0.0.1-alpha02"
+glance = "1.1.1"
+googleServices = "4.4.4"
+gradlePublish = "2.0.0"
+hiltLifecycleViewmodelCompose = "1.3.0"
+jetbrainsLifecycle = "2.9.6"
+junit = "4.13.2"
+koinBom = "4.1.1"
+kotlin = "2.3.0"
+kotlinCollectionsImmutable = "0.4.0"
+kotlinCoroutines = "1.10.2"
+kotlinDatetime = "0.7.1-0.6.x-compat"
+kotlinSerializationJson = "1.9.0"
+ksp = "2.3.4"
+ktlint = "1.8.0"
+navigation = "2.9.6"
+navigationComposeExtended = "1.4.0"
+ossLicenses = "0.10.10"
+pigment = "0.6.0"
+playServicesOssLicenses = "17.3.0"
+playServicesWearable = "19.0.0"
+profileinstaller = "1.4.1"
+sergiobeldaBuildLogic = "0.0.1"
+sergiobeldaDependencies = "0.0.1"
+splashscreen = "1.2.0"
+spotless = "8.1.0"
+uiautomator = "2.3.0"
+vanniktechPublishPlugin = "0.33.0"
+wear = "1.3.0"
+wearCompose = "1.5.6"
+wearInput = "1.2.0"
+wearToolingPreview = "1.0.0"
+
+[libraries]
+## android
+android-gradlePlugin = { module = "com.android.tools.build:gradle", version.ref = "androidGradlePlugin" }
+
+## androidx
+androidx-activityCompose = { module = "androidx.activity:activity-compose", version.ref = "activity" }
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-benchmark-macroJunit4 = { group = "androidx.benchmark", name = "benchmark-macro-junit4", version.ref = "androidxBenchmark" }
+androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "composeBom" }
+androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
+androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
+androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
+androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-ui-toolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
+androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashscreen" }
+androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+androidx-datastore-preferencesCore = { module = "androidx.datastore:datastore-preferences-core", version.ref = "datastore" }
+androidx-glance-appWidget = { module = "androidx.glance:glance-appwidget", version.ref = "glance" }
+androidx-glance-glance = { module = "androidx.glance:glance", version.ref = "glance" }
+androidx-glance-material3 = { module = "androidx.glance:glance-material3", version.ref = "glance" }
+androidx-hilt-lifecycle-viewmodelCompose = { module = "androidx.hilt:hilt-lifecycle-viewmodel-compose", version.ref = "hiltLifecycleViewmodelCompose" }
+androidx-lifecycle-runtimeKtx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewmodel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel", version.ref = "androidxLifecycle" }
+androidx-lifecycle-viewmodelCompose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version.ref = "androidxLifecycle" }
+androidx-navigation-compose = { group = "androidx.navigation", name = "navigation-compose", version.ref = "navigation" }
+androidx-profileinstaller = { module = "androidx.profileinstaller:profileinstaller", version.ref = "profileinstaller" }
+androidx-test-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidxJunit" }
+androidx-test-uiautomator = { group = "androidx.test.uiautomator", name = "uiautomator", version.ref = "uiautomator" }
+androidx-wear-compose-foundation = { module = "androidx.wear.compose:compose-foundation", version.ref = "wearCompose" }
+androidx-wear-compose-material = { module = "androidx.wear.compose:compose-material", version.ref = "wearCompose" }
+androidx-wear-compose-navigation = { module = "androidx.wear.compose:compose-navigation", version.ref = "wearCompose" }
+androidx-wear-input = { module = "androidx.wear:wear-input", version.ref = "wearInput" }
+androidx-wear-toolingPreview = { module = "androidx.wear:wear-tooling-preview", version.ref = "wearToolingPreview" }
+androidx-wear-wear = { module = "androidx.wear:wear", version.ref = "wear" }
+
+## google
+google-dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "daggerHilt" }
+google-dagger-hiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "daggerHilt" }
+google-firebase-analyticsKtx = { module = "com.google.firebase:firebase-analytics-ktx" }
+google-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "firebaseBom" }
+google-firebase-crashlyticsKtx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+google-gms-ossLicensesPlugin = { module = "com.google.android.gms:oss-licenses-plugin", version.ref = "ossLicenses" }
+google-gms-playServicesOssLicenses = { module = "com.google.android.gms:play-services-oss-licenses", version.ref = "playServicesOssLicenses" }
+google-gms-playServicesWearable = { module = "com.google.android.gms:play-services-wearable", version.ref = "playServicesWearable" }
+
+## jetbrains
+jetbrains-androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "jetbrainsLifecycle" }
+jetbrains-compose-animationGraphics = { module = "org.jetbrains.compose.animation:animation-graphics", version.ref = "composeMultiplatform" }
+jetbrains-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+jetbrains-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMultiplatformMaterial3" }
+jetbrains-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
+jetbrains-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
+jetbrains-compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
+jetbrains-kotlin-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlinCollectionsImmutable" }
+jetbrains-kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
+jetbrains-kotlin-coroutines-guava = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-guava", version.ref = "kotlinCoroutines" }
+jetbrains-kotlin-coroutines-swing = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-swing", version.ref = "kotlinCoroutines" }
+jetbrains-kotlin-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinCoroutines" }
+jetbrains-kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime", version.ref = "kotlinDatetime" }
+jetbrains-kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+jetbrains-kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerializationJson" }
+
+## thirdparties
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+
+koin-android = { module = "io.insert-koin:koin-android" }
+koin-androidXCompose = { module = "io.insert-koin:koin-androidx-compose" }
+koin-bom = { module = "io.insert-koin:koin-bom", version.ref = "koinBom" }
+koin-compose = { module = "io.insert-koin:koin-compose" }
+koin-composeViewmodel = { module = "io.insert-koin:koin-compose-viewmodel" }
+koin-core = { module = "io.insert-koin:koin-core" }
+koin-test = { module = "io.insert-koin:koin-test" }
+
+sergiobelda-composeVectorize-core = { module = "dev.sergiobelda.compose.vectorize:compose-vectorize-core", version.ref = "composeVectorize" }
+sergiobelda-fonament-diKoin = { module = "dev.sergiobelda.fonament:fonament-di-koin", version.ref = "fonament" }
+sergiobelda-fonament-presentation = { module = "dev.sergiobelda.fonament:fonament-presentation", version.ref = "fonament" }
+sergiobelda-navigationComposeExtended = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended", version.ref = "navigationComposeExtended" }
+sergiobelda-navigationComposeExtendedAnnotation = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-annotation", version.ref = "navigationComposeExtended" }
+sergiobelda-navigationComposeExtendedCompiler = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-compiler", version.ref = "navigationComposeExtended" }
+sergiobelda-navigationComposeExtendedWear = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-wear", version.ref = "navigationComposeExtended" }
+sergiobelda-pigment = { module = "dev.sergiobelda.pigment:pigment", version.ref = "pigment" }
+
+spotless-gradlePlugin = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
+
+[plugins]
+## android
+android-application = { id = "com.android.application", version.ref = "androidGradlePlugin" }
+android-library = { id = "com.android.library", version.ref = "androidGradlePlugin" }
+android-test = { id = "com.android.test", version.ref = "androidGradlePlugin" }
+
+## google
+google-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerHilt" }
+google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "firebaseCrashlyticsPlugin" }
+google-gms-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
+google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+
+## jetbrains
+jetbrains-dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
+jetbrains-composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
+jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+jetbrains-kotlin-composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrains-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
+jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+
+## thirdparties
+gradle-publish = { id = "com.gradle.plugin-publish", version.ref = "gradlePublish" }
+vanniktech-mavenpublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktechPublishPlugin" }
+
+sergiobelda-convention-android-library = { id = "dev.sergiobelda.convention.android.library", version.ref = "sergiobeldaBuildLogic" }
+sergiobelda-convention-spotless = { id = "dev.sergiobelda.convention.spotless", version.ref = "sergiobeldaBuildLogic" }
