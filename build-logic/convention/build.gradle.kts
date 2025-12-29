@@ -1,6 +1,6 @@
 plugins {
     `kotlin-dsl`
-    alias(libs.plugins.gradle.publish)
+    alias(libs.plugins.vanniktech.mavenpublish)
 }
 
 group = "dev.sergiobelda.projectconfig.buildlogic"
@@ -38,4 +38,10 @@ gradlePlugin {
             tags = listOf("convention", "spotless")
         }
     }
+}
+
+mavenPublishing {
+    publishToMavenCentral(true)
+
+    signAllPublications()
 }

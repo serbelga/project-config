@@ -43,8 +43,8 @@ pigment = "0.6.0"
 playServicesOssLicenses = "17.3.0"
 playServicesWearable = "19.0.0"
 profileinstaller = "1.4.1"
-sergiobeldaBuildLogic = "0.0.1"
-sergiobeldaDependencies = "0.0.2"
+sergiobeldaBuildLogic = "0.0.3"
+sergiobeldaDependencies = "0.0.3"
 splashscreen = "1.2.0"
 spotless = "8.1.0"
 uiautomator = "2.3.0"
@@ -158,6 +158,7 @@ jetbrains-dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 jetbrains-composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
 jetbrains-kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 jetbrains-kotlin-composeCompiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
 jetbrains-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
