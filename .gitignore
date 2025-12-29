@@ -10,4 +10,5 @@
 # Project exclude paths
 /build-logic/convention/build/
 /build-logic/convention/build/classes/kotlin/main/
-/dependencies/dependencies/build/
+/catalog/deps/build/
+/catalog/sergiobelda/build/

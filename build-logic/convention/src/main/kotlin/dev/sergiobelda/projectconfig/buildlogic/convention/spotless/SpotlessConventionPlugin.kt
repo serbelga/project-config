@@ -17,17 +17,15 @@
 package dev.sergiobelda.projectconfig.buildlogic.convention.spotless
 
 import com.diffplug.gradle.spotless.SpotlessExtension
+import dev.sergiobelda.projectconfig.buildlogic.convention.extensions.deps
 import org.gradle.api.Plugin
 import org.gradle.api.Project
-import org.gradle.api.artifacts.VersionCatalogsExtension
 import org.gradle.kotlin.dsl.configure
-import org.gradle.kotlin.dsl.getByType
 
 class SpotlessConventionPlugin : Plugin<Project> {
     override fun apply(target: Project) {
         with(target) {
-            val libs = extensions.getByType<VersionCatalogsExtension>().named("libs")
-            val ktlintVersion = libs.findVersion("ktlint").get().toString()
+            val ktlintVersion = deps.findVersion("ktlint").get().toString()
 
             pluginManager.apply("com.diffplug.spotless")
 

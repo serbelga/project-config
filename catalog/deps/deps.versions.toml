@@ -14,14 +14,13 @@ appcompat = "1.7.1"
 composeBom = "2025.12.01"
 composeMultiplatform = "1.10.0-rc02"
 composeMultiplatformMaterial3 = "1.9.0"
-composeVectorize = "1.1.0"
+composeMultiplatformMaterialIconsExtended = "1.7.3"
 daggerHilt = "2.57.2"
 datastore = "1.1.7"
 dokka = "2.1.0"
 espresso = "3.7.0"
 firebaseBom = "33.16.0"
 firebaseCrashlyticsPlugin = "3.0.6"
-fonament = "0.0.1-alpha02"
 glance = "1.1.1"
 googleServices = "4.4.4"
 gradlePublish = "2.0.0"
@@ -37,14 +36,15 @@ kotlinSerializationJson = "1.9.0"
 ksp = "2.3.4"
 ktlint = "1.8.0"
 navigation = "2.9.6"
-navigationComposeExtended = "1.4.0"
 ossLicenses = "0.10.10"
-pigment = "0.6.0"
 playServicesOssLicenses = "17.3.0"
 playServicesWearable = "19.0.0"
 profileinstaller = "1.4.1"
-sergiobeldaBuildLogic = "0.0.3"
-sergiobeldaDependencies = "0.0.3"
+sergiobelda-composeVectorize = "1.1.0"
+sergiobelda-fonament = "0.0.1-alpha02"
+sergiobelda-navigationComposeExtended = "1.4.0"
+sergiobelda-pigment = "0.6.0"
+sergiobelda-projectconfig = "0.0.4"
 splashscreen = "1.2.0"
 spotless = "8.1.0"
 uiautomator = "2.3.0"
@@ -66,9 +66,9 @@ androidx-compose-bom = { group = "androidx.compose", name = "compose-bom", versi
 androidx-compose-foundation = { group = "androidx.compose.foundation", name = "foundation" }
 androidx-compose-material3 = { group = "androidx.compose.material3", name = "material3" }
 androidx-compose-ui = { group = "androidx.compose.ui", name = "ui" }
-androidx-compose-ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
-androidx-compose-ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
-androidx-compose-ui-toolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+androidx-compose-uiGraphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+androidx-compose-uiTooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+androidx-compose-uiToolingPreview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
 androidx-core-ktx = { module = "androidx.core:core-ktx", version.ref = "androidxCore" }
 androidx-core-splashscreen = { module = "androidx.core:core-splashscreen", version.ref = "splashscreen" }
 androidx-datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
@@ -106,9 +106,11 @@ google-gms-playServicesWearable = { module = "com.google.android.gms:play-servic
 jetbrains-androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "jetbrainsLifecycle" }
 jetbrains-compose-animationGraphics = { module = "org.jetbrains.compose.animation:animation-graphics", version.ref = "composeMultiplatform" }
 jetbrains-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "composeMultiplatform" }
+jetbrains-compose-materialIconsExtended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "composeMultiplatformMaterialIconsExtended" }
 jetbrains-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "composeMultiplatformMaterial3" }
 jetbrains-compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "composeMultiplatform" }
 jetbrains-compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "composeMultiplatform" }
+jetbrains-compose-uiTooling = { module = "org.jetbrains.compose.ui:ui-tooling", version.ref = "composeMultiplatform" }
 jetbrains-compose-uiToolingPreview = { module = "org.jetbrains.compose.ui:ui-tooling-preview", version.ref = "composeMultiplatform" }
 jetbrains-kotlin-collections-immutable = { module = "org.jetbrains.kotlinx:kotlinx-collections-immutable", version.ref = "kotlinCollectionsImmutable" }
 jetbrains-kotlin-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinCoroutines" }
@@ -119,7 +121,6 @@ jetbrains-kotlin-datetime = { module = "org.jetbrains.kotlinx:kotlinx-datetime",
 jetbrains-kotlin-gradlePlugin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 jetbrains-kotlin-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinSerializationJson" }
 
-## thirdparties
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 
 koin-android = { module = "io.insert-koin:koin-android" }
@@ -130,14 +131,14 @@ koin-composeViewmodel = { module = "io.insert-koin:koin-compose-viewmodel" }
 koin-core = { module = "io.insert-koin:koin-core" }
 koin-test = { module = "io.insert-koin:koin-test" }
 
-sergiobelda-composeVectorize-core = { module = "dev.sergiobelda.compose.vectorize:compose-vectorize-core", version.ref = "composeVectorize" }
-sergiobelda-fonament-diKoin = { module = "dev.sergiobelda.fonament:fonament-di-koin", version.ref = "fonament" }
-sergiobelda-fonament-presentation = { module = "dev.sergiobelda.fonament:fonament-presentation", version.ref = "fonament" }
-sergiobelda-navigationComposeExtended = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended", version.ref = "navigationComposeExtended" }
-sergiobelda-navigationComposeExtendedAnnotation = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-annotation", version.ref = "navigationComposeExtended" }
-sergiobelda-navigationComposeExtendedCompiler = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-compiler", version.ref = "navigationComposeExtended" }
-sergiobelda-navigationComposeExtendedWear = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-wear", version.ref = "navigationComposeExtended" }
-sergiobelda-pigment = { module = "dev.sergiobelda.pigment:pigment", version.ref = "pigment" }
+sergiobelda-composeVectorize-core = { module = "dev.sergiobelda.compose.vectorize:compose-vectorize-core", version.ref = "sergiobelda-composeVectorize" }
+sergiobelda-fonament-diKoin = { module = "dev.sergiobelda.fonament:fonament-di-koin", version.ref = "sergiobelda-fonament" }
+sergiobelda-fonament-presentation = { module = "dev.sergiobelda.fonament:fonament-presentation", version.ref = "sergiobelda-fonament" }
+sergiobelda-navigationComposeExtended = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended", version.ref = "sergiobelda-navigationComposeExtended" }
+sergiobelda-navigationComposeExtendedAnnotation = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-annotation", version.ref = "sergiobelda-navigationComposeExtended" }
+sergiobelda-navigationComposeExtendedCompiler = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-compiler", version.ref = "sergiobelda-navigationComposeExtended" }
+sergiobelda-navigationComposeExtendedWear = { module = "dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-wear", version.ref = "sergiobelda-navigationComposeExtended" }
+sergiobelda-pigment = { module = "dev.sergiobelda.pigment:pigment", version.ref = "sergiobelda-pigment" }
 
 spotless-gradlePlugin = { module = "com.diffplug.spotless:spotless-plugin-gradle", version.ref = "spotless" }
 
@@ -153,6 +154,8 @@ google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.
 google-gms-services = { id = "com.google.gms.google-services", version.ref = "googleServices" }
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
 
+gradle-publish = { id = "com.gradle.plugin-publish", version.ref = "gradlePublish" }
+
 ## jetbrains
 jetbrains-dokka = { id = "org.jetbrains.dokka", version.ref = "dokka" }
 jetbrains-composeMultiplatform = { id = "org.jetbrains.compose", version.ref = "composeMultiplatform" }
@@ -162,9 +165,7 @@ jetbrains-kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin"
 jetbrains-kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 jetbrains-kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
 
-## thirdparties
-gradle-publish = { id = "com.gradle.plugin-publish", version.ref = "gradlePublish" }
-vanniktech-mavenpublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktechPublishPlugin" }
+sergiobelda-convention-android-library = { id = "dev.sergiobelda.convention.android.library", version.ref = "sergiobelda-projectconfig" }
+sergiobelda-convention-spotless = { id = "dev.sergiobelda.convention.spotless", version.ref = "sergiobelda-projectconfig" }
 
-sergiobelda-convention-android-library = { id = "dev.sergiobelda.convention.android.library", version.ref = "sergiobeldaBuildLogic" }
-sergiobelda-convention-spotless = { id = "dev.sergiobelda.convention.spotless", version.ref = "sergiobeldaBuildLogic" }
+vanniktech-mavenpublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktechPublishPlugin" }

@@ -1,4 +1,4 @@
 plugins {
     `kotlin-dsl` apply false
-    alias(libs.plugins.vanniktech.mavenpublish) apply false
+    alias(deps.plugins.vanniktech.mavenpublish) apply false
 }
