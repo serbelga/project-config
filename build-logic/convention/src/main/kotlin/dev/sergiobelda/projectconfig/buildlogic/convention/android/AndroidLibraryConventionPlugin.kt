@@ -42,10 +42,10 @@ internal fun Project.configureCommonAndroid(
     commonExtension: CommonExtension<*, *, *, *, *, *>,
 ) {
     commonExtension.apply {
-        compileSdk = deps.findVersion("androidCompileSdk").get().toString().toInt()
+        compileSdk = deps.findVersion("android-compileSdk").get().toString().toInt()
         sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
         defaultConfig {
-            minSdk = deps.findVersion("androidMinSdk").get().toString().toInt()
+            minSdk = deps.findVersion("android-minSdk").get().toString().toInt()
         }
 
         compileOptions {

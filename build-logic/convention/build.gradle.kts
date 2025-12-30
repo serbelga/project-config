@@ -4,6 +4,7 @@ plugins {
 }
 
 group = "dev.sergiobelda.projectconfig.buildlogic"
+version = deps.versions.sergiobelda.projectconfig
 
 java {
     toolchain {

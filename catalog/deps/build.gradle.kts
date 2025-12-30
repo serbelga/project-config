@@ -4,6 +4,7 @@ plugins {
 }
 
 group = "dev.sergiobelda.projectconfig.catalog"
+version = deps.versions.sergiobelda.projectconfig
 
 catalog {
     versionCatalog {
