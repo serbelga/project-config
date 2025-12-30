@@ -52,7 +52,7 @@ sergiobelda-navigationComposeExtended = "1.4.0"
 sergiobelda-pigment = "0.6.0"
 sergiobelda-projectconfig = "0.0.4"
 spotless = "8.1.0"
-vanniktechPublishPlugin = "0.33.0"
+vanniktech-mavenpublish = "0.33.0"
 
 [libraries]
 ## android
@@ -169,4 +169,4 @@ sergiobelda-composeVectorize = { id = "dev.sergiobelda.compose.vectorize", versi
 sergiobelda-convention-android-library = { id = "dev.sergiobelda.convention.android.library", version.ref = "sergiobelda-projectconfig" }
 sergiobelda-convention-spotless = { id = "dev.sergiobelda.convention.spotless", version.ref = "sergiobelda-projectconfig" }
 
-vanniktech-mavenpublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktechPublishPlugin" }
+vanniktech-mavenpublish = { id = "com.vanniktech.maven.publish", version.ref = "vanniktech-mavenpublish" }
