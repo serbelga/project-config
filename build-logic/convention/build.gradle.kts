@@ -1,10 +1,10 @@
 plugins {
     `kotlin-dsl`
-    alias(libs.plugins.vanniktech.mavenpublish)
+    alias(deps.plugins.vanniktech.mavenpublish)
 }
 
 group = "dev.sergiobelda.projectconfig.buildlogic"
-version = libs.versions.sergiobeldaBuildLogic.get()
+version = deps.versions.sergiobelda.projectconfig.get()
 
 java {
     toolchain {
@@ -13,9 +13,9 @@ java {
 }
 
 dependencies {
-    implementation(libs.android.gradlePlugin)
-    implementation(libs.jetbrains.kotlin.gradlePlugin)
-    implementation(libs.spotless.gradlePlugin)
+    implementation(deps.android.gradlePlugin)
+    implementation(deps.jetbrains.kotlin.gradlePlugin)
+    implementation(deps.spotless.gradlePlugin)
 }
 
 gradlePlugin {
@@ -24,14 +24,14 @@ gradlePlugin {
     plugins {
         val conventionPluginsPath = "dev.sergiobelda.projectconfig.buildlogic.convention"
         create("android-library") {
-            id = libs.plugins.sergiobelda.convention.android.library.get().pluginId
+            id = deps.plugins.sergiobelda.convention.android.library.get().pluginId
             implementationClass = "$conventionPluginsPath.android.AndroidLibraryConventionPlugin"
             displayName = "android-library"
             description = "Convention plugin for android library modules"
             tags = listOf("convention", "android-library")
         }
         create("spotless") {
-            id = libs.plugins.sergiobelda.convention.spotless.get().pluginId
+            id = deps.plugins.sergiobelda.convention.spotless.get().pluginId
             implementationClass = "$conventionPluginsPath.spotless.SpotlessConventionPlugin"
             displayName = "spotless"
             description = "Convention plugin that applies a custom spotless configuration"

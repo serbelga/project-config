@@ -15,11 +15,11 @@ dependencyResolutionManagement {
         mavenCentral()
     }
     versionCatalogs {
-        create("libs") {
-            from(files("./dependencies/dependencies/libs.versions.toml"))
+        create("deps") {
+            from(files("./catalog/deps/deps.versions.toml"))
         }
     }
 }
 
 include(":build-logic:convention")
-include(":dependencies:dependencies")
+include(":catalog:deps")
