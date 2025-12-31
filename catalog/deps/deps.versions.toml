@@ -98,9 +98,9 @@ androidx-wear-wear = { module = "androidx.wear:wear", version.ref = "androidx-we
 ## google
 google-dagger-hilt = { module = "com.google.dagger:hilt-android", version.ref = "google-hilt" }
 google-dagger-hiltCompiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "google-hilt" }
-google-firebase-analyticsKtx = { module = "com.google.firebase:firebase-analytics-ktx" }
+google-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 google-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "google-firebaseBom" }
-google-firebase-crashlyticsKtx = { module = "com.google.firebase:firebase-crashlytics-ktx" }
+google-firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
 google-gms-ossLicensesPlugin = { module = "com.google.android.gms:oss-licenses-plugin", version.ref = "google-ossLicenses" }
 google-gms-playServicesOssLicenses = { module = "com.google.android.gms:play-services-oss-licenses", version.ref = "google-playServicesOssLicenses" }
 google-gms-playServicesWearable = { module = "com.google.android.gms:play-services-wearable", version.ref = "google-playServicesWearable" }
