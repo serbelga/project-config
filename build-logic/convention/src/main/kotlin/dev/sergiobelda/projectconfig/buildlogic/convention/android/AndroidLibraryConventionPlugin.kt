@@ -16,8 +16,7 @@
 
 package dev.sergiobelda.projectconfig.buildlogic.convention.android
 
-import com.android.build.api.dsl.CommonExtension
-import com.android.build.gradle.LibraryExtension
+import com.android.build.api.dsl.LibraryExtension
 import dev.sergiobelda.projectconfig.buildlogic.convention.extensions.deps
 import org.gradle.api.JavaVersion
 import org.gradle.api.Plugin
@@ -38,10 +37,8 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
     }
 }
 
-internal fun Project.configureCommonAndroid(
-    commonExtension: CommonExtension<*, *, *, *, *, *>,
-) {
-    commonExtension.apply {
+internal fun Project.configureCommonAndroid(extension: LibraryExtension) {
+    extension.apply {
         compileSdk = deps.findVersion("android-compileSdk").get().toString().toInt()
         sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
         defaultConfig {
