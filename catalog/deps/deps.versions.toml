@@ -58,7 +58,7 @@ squareup-moshi = "1.15.2"
 squareup-okhttp3 = "5.3.2"
 squareup-retrofit = "3.0.0"
 touchlab-stately = "2.1.0"
-vanniktech-mavenpublish = "0.33.0"
+vanniktech-mavenpublish = "0.36.0"
 
 [libraries]
 ## android
