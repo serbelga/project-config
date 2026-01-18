@@ -1,6 +1,6 @@
 [versions]
 android-compileSdk = "36"
-android-gradlePlugin = "9.0.0"
+android-gradlePlugin = "8.13.2"
 android-minSdk = "24"
 android-targetSdk = "36"
 android-wear-minSdk = "25"
@@ -165,6 +165,7 @@ touchlab-stately-concurrentCollections = { module = "co.touchlab:stately-concurr
 [plugins]
 ## android
 android-application = { id = "com.android.application", version.ref = "android-gradlePlugin" }
+android-kotlinMultiplatformLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "android-gradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "android-gradlePlugin" }
 android-test = { id = "com.android.test", version.ref = "android-gradlePlugin" }
 
