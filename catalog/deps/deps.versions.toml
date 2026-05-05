@@ -1,6 +1,6 @@
 [versions]
 android-compileSdk = "36"
-android-gradlePlugin = "9.2.0"
+android-gradlePlugin = "9.2.1"
 android-minSdk = "24"
 android-targetSdk = "36"
 android-wear-minSdk = "25"
