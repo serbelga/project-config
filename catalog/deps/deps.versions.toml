@@ -1,8 +1,8 @@
 [versions]
-android-compileSdk = "36"
+android-compileSdk = "37"
 android-gradlePlugin = "9.3.1"
 android-minSdk = "24"
-android-targetSdk = "36"
+android-targetSdk = "37"
 android-wear-minSdk = "25"
 android-wear-targetSdk = "33"
 androidx-activity = "1.13.0"
