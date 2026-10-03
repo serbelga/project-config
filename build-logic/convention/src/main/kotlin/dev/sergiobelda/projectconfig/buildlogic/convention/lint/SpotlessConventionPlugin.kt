@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package dev.sergiobelda.projectconfig.buildlogic.convention.spotless
+package dev.sergiobelda.projectconfig.buildlogic.convention.lint
 
 import com.diffplug.gradle.spotless.SpotlessExtension
 import dev.sergiobelda.projectconfig.buildlogic.convention.extensions.deps

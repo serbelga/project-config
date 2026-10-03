@@ -14,6 +14,7 @@ java {
 
 dependencies {
     implementation(deps.android.gradlePlugin)
+    implementation(deps.detekt.gradlePlugin)
     implementation(deps.jetbrains.kotlin.gradlePlugin)
     implementation(deps.spotless.gradlePlugin)
 }
@@ -22,20 +23,36 @@ gradlePlugin {
     website.set("https://github.com/serbelga/project-config")
     vcsUrl.set("https://github.com/serbelga/project-config")
     plugins {
-        val conventionPluginsPath = "dev.sergiobelda.projectconfig.buildlogic.convention"
+        val conventionPluginsPath = "dev.sergiobelda.projectconfig.buildlogic.convention."
         create("android-library") {
             id = deps.plugins.sergiobelda.convention.android.library.get().pluginId
-            implementationClass = "$conventionPluginsPath.android.AndroidLibraryConventionPlugin"
+            implementationClass = conventionPluginsPath + "android.AndroidLibraryConventionPlugin"
             displayName = "android-library"
             description = "Convention plugin for android library modules"
             tags = listOf("convention", "android-library")
         }
+
+        val conventionPluginsLintPath = conventionPluginsPath + "lint."
+        create("detekt") {
+            id = deps.plugins.sergiobelda.convention.detekt.get().pluginId
+            implementationClass = conventionPluginsLintPath + "DetektConventionPlugin"
+            displayName = "detekt"
+            description = ""
+            tags = listOf("convention", "detekt")
+        }
         create("spotless") {
             id = deps.plugins.sergiobelda.convention.spotless.get().pluginId
-            implementationClass = "$conventionPluginsPath.spotless.SpotlessConventionPlugin"
+            implementationClass = conventionPluginsLintPath + "SpotlessConventionPlugin"
             displayName = "spotless"
             description = "Convention plugin that applies a custom spotless configuration"
             tags = listOf("convention", "spotless")
+        }
+        create("lint") {
+            id = deps.plugins.sergiobelda.convention.lint.get().pluginId
+            implementationClass = conventionPluginsLintPath + "LintConventionPlugin"
+            displayName = "lint"
+            description = ""
+            tags = listOf("convention", "lint")
         }
     }
 }
