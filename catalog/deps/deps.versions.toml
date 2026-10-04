@@ -1,4 +1,5 @@
 [versions]
+android-baselineprofile-minSdk = "28"
 android-compileSdk = "37"
 android-gradlePlugin = "9.3.1"
 android-minSdk = "24"
@@ -7,6 +8,7 @@ android-wear-minSdk = "25"
 android-wear-targetSdk = "33"
 androidx-activity = "1.13.0"
 androidx-appcompat = "1.8.0"
+androidx-baselineprofile = "1.5.0"
 androidx-benchmark = "1.4.1"
 androidx-composeBom = "2026.09.00"
 androidx-core = "1.19.0"
@@ -26,9 +28,11 @@ androidx-wear = "1.4.0"
 androidx-wearCompose = "1.6.2"
 androidx-wearInput = "1.2.0"
 androidx-wearToolingPreview = "1.0.0"
+androidx-work = "2.12.0"
 detekt = "1.23.8"
 google-firebaseBom = "34.17.0"
 google-firebaseCrashlytics = "3.0.8"
+google-firebasePerf = "2.0.2"
 google-hilt = "2.60.1"
 google-ksp = "2.3.12"
 google-ossLicenses = "0.13.0"
@@ -45,6 +49,7 @@ jetbrains-kotlinxCoroutines = "1.11.0"
 jetbrains-kotlinxDatetime = "0.8.0-0.6.x-compat"
 jetbrains-kotlinxSerialization = "1.11.0"
 jetbrains-lifecycle = "2.11.0"
+jetbrains-navigation = "2.9.2"
 junit = "4.13.2"
 koin-bom = "4.2.2"
 kotlin = "2.4.10"
@@ -55,7 +60,8 @@ sergiobelda-composeVectorize = "1.3.0"
 sergiobelda-fonament = "0.0.1-alpha05"
 sergiobelda-navigationComposeExtended = "1.6.2"
 sergiobelda-pigment = "0.7.0"
-sergiobelda-projectconfig = "2026.10.00"
+sergiobelda-projectconfig = "2026.10.01"
+sqldelight = "2.4.0"
 spotless = "8.10.3"
 squareup-moshi = "1.15.2"
 squareup-okhttp3 = "5.5.0"
@@ -101,9 +107,17 @@ androidx-test-uiautomator = { group = "androidx.test.uiautomator", name = "uiaut
 androidx-wear-compose-foundation = { module = "androidx.wear.compose:compose-foundation", version.ref = "androidx-wearCompose" }
 androidx-wear-compose-material = { module = "androidx.wear.compose:compose-material", version.ref = "androidx-wearCompose" }
 androidx-wear-compose-navigation = { module = "androidx.wear.compose:compose-navigation", version.ref = "androidx-wearCompose" }
+androidx-wear-compose-uiTooling = { module = "androidx.wear.compose:compose-ui-tooling", version.ref = "androidx-wearCompose" }
 androidx-wear-input = { module = "androidx.wear:wear-input", version.ref = "androidx-wearInput" }
 androidx-wear-toolingPreview = { module = "androidx.wear:wear-tooling-preview", version.ref = "androidx-wearToolingPreview" }
 androidx-wear-wear = { module = "androidx.wear:wear", version.ref = "androidx-wear" }
+androidx-work-runtime = { module = "androidx.work:work-runtime", version.ref = "androidx-work" }
+
+cashapp-sqldelight-androidDriver = { module = "app.cash.sqldelight:android-driver", version.ref = "sqldelight" }
+cashapp-sqldelight-jvmDriver = { module = "app.cash.sqldelight:sqlite-driver", version.ref = "sqldelight" }
+cashapp-sqldelight-nativeDriver = { module = "app.cash.sqldelight:native-driver", version.ref = "sqldelight" }
+cashapp-sqldelight-coroutines = { module = "app.cash.sqldelight:coroutines-extensions", version.ref = "sqldelight" }
+cashapp-sqldelight-primitiveAdapters = { module = "app.cash.sqldelight:primitive-adapters", version.ref = "sqldelight" }
 
 detekt-gradlePlugin = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version.ref = "detekt" }
 
@@ -113,13 +127,16 @@ google-dagger-hiltCompiler = { module = "com.google.dagger:hilt-android-compiler
 google-firebase-analytics = { module = "com.google.firebase:firebase-analytics" }
 google-firebase-bom = { module = "com.google.firebase:firebase-bom", version.ref = "google-firebaseBom" }
 google-firebase-crashlytics = { module = "com.google.firebase:firebase-crashlytics" }
+google-firebase-perf = { module = "com.google.firebase:firebase-perf" }
 google-gms-ossLicensesPlugin = { module = "com.google.android.gms:oss-licenses-plugin", version.ref = "google-ossLicenses" }
 google-gms-playServicesOssLicenses = { module = "com.google.android.gms:play-services-oss-licenses", version.ref = "google-playServicesOssLicenses" }
 google-gms-playServicesWearable = { module = "com.google.android.gms:play-services-wearable", version.ref = "google-playServicesWearable" }
 
 ## jetbrains
 jetbrains-androidx-lifecycle-viewmodelCompose = { module = "org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "jetbrains-lifecycle" }
+jetbrains-androidx-navigation-compose = { module = "org.jetbrains.androidx.navigation:navigation-compose", version.ref = "jetbrains-navigation" }
 jetbrains-compose-animationGraphics = { module = "org.jetbrains.compose.animation:animation-graphics", version.ref = "jetbrains-compose" }
+jetbrains-compose-componentsResources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "jetbrains-compose" }
 jetbrains-compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "jetbrains-compose" }
 jetbrains-compose-material3 = { module = "org.jetbrains.compose.material3:material3", version.ref = "jetbrains-composeMaterial3" }
 jetbrains-compose-materialIconsExtended = { module = "org.jetbrains.compose.material:material-icons-extended", version.ref = "jetbrains-composeMaterialIconsExtended" }
@@ -178,12 +195,16 @@ android-application = { id = "com.android.application", version.ref = "android-g
 android-kotlinMultiplatformLibrary = { id = "com.android.kotlin.multiplatform.library", version.ref = "android-gradlePlugin" }
 android-library = { id = "com.android.library", version.ref = "android-gradlePlugin" }
 android-test = { id = "com.android.test", version.ref = "android-gradlePlugin" }
+androidx-baselineprofile = { id = "androidx.baselineprofile", version.ref = "androidx-baselineprofile" }
+
+cashapp-sqldelight = { id = "app.cash.sqldelight", version.ref = "sqldelight" }
 
 detekt = { id = "io.gitlab.arturbosch.detekt", version.ref = "detekt" }
 
 ## google
 google-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "google-hilt" }
 google-firebase-crashlytics = { id = "com.google.firebase.crashlytics", version.ref = "google-firebaseCrashlytics" }
+google-firebase-perf = { id = "com.google.firebase.firebase-perf", version.ref = "google-firebasePerf" }
 google-gms-services = { id = "com.google.gms.google-services", version.ref = "google-services" }
 google-ksp = { id = "com.google.devtools.ksp", version.ref = "google-ksp" }
 
